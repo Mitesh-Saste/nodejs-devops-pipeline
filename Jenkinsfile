@@ -27,7 +27,7 @@ pipeline {
 
         stage('Copy SSH Key') {
             steps {
-                sh 'cp /home/mitesh/keys/devops-server-key.pub /var/lib/jenkins/workspace/nodejs-devops-pipeline/infra/'
+                sh 'cp /var/lib/jenkins/keys/devops-server-key.pub infra/'
             }
         }
 
