@@ -25,6 +25,12 @@ pipeline {
             }
         }
 
+        stage('Copy SSH Key') {
+            steps {
+                sh 'cp ~/devops-server-key.pub infra/'
+            }
+        }
+
         stage('Terraform Apply - Provision Infra') {
             steps {
                 dir('infra') {
