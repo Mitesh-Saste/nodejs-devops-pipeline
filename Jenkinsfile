@@ -70,5 +70,8 @@ pipeline {
         failure {
             echo "Pipeline failed. Check logs."
         }
+        always {
+            cleanWs()
+        }
     }
 }
