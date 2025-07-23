@@ -27,7 +27,7 @@ pipeline {
 
         stage('Copy SSH Key') {
             steps {
-                sh 'cp ~/devops-server-key.pub infra/'
+                sh 'cp /home/mitesh/keys/devops-server-key.pub infra/'
             }
         }
 
