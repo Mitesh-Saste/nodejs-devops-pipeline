@@ -63,16 +63,6 @@ pipeline {
                 }
             }
         }
-
-        stage('Cleanup') {
-            steps {
-                script {
-                    sh 'chmod +x scripts/cleanup.sh'
-                    sh './scripts/cleanup.sh'
-                }
-            }
-        }
-        
     }
 
     post {
