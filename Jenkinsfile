@@ -45,7 +45,7 @@ pipeline {
         stage('Prepare Ansible Hosts') {
             steps {
                 script {
-                    def ec2_ip = sh(script: "terraform -chdir=infra output -raw ec2_private_ip", returnStdout: true).trim()
+                    def ec2_ip = sh(script: "terraform -chdir=infra output -raw ec2_pub_ip", returnStdout: true).trim()
                     writeFile file: 'ansible/hosts.ini', text: """
                     [app_server]
                     ${ec2_ip} ansible_user=ubuntu ansible_ssh_private_key_file=${SSH_KEY_PATH}
