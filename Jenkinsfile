@@ -37,6 +37,7 @@ pipeline {
                     sh 'terraform init'
                     timeout(time: 30, unit: 'MINUTES') {
                         sh 'terraform apply -auto-approve'
+                        sh 'terraform refresh'
                     }
                 }
             }
@@ -70,9 +71,6 @@ pipeline {
         }
         failure {
             echo "Pipeline failed. Check logs."
-        }
-        always {
-            cleanWs()
         }
     }
 }
