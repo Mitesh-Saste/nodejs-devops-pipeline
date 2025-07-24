@@ -4,7 +4,7 @@ pipeline {
     environment {
         GIT_COMMIT = "${env.GIT_COMMIT ?: 'latest'}"
         IMAGE = "miteshsaste/devops-nodejs-app:${GIT_COMMIT}"
-        SSH_KEY_PATH = '/home/ubuntu/devops-server-key' 
+        SSH_KEY_PATH = '/var/lib/jenkins/.ssh/devops-server-key' 
     }
 
     stages {
@@ -27,7 +27,7 @@ pipeline {
 
         stage('Copy SSH Key') {
             steps {
-                sh 'cp /var/lib/jenkins/keys/devops-server-key.pub infra/'
+                sh 'cp /var/lib/jenkins/.ssh/devops-server-key.pub infra/'
             }
         }
 
