@@ -66,10 +66,8 @@ pipeline {
 
         stage('Cleanup') {
             steps {
-                sh '''
-                    chmod +x scripts/cleanup.sh
-                    ./scripts/cleanup.sh
-                '''
+                    sh 'chmod +x scripts/cleanup.sh'
+                    sh './scripts/cleanup.sh'
             }
         }
         
