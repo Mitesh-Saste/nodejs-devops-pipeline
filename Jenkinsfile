@@ -68,7 +68,7 @@ pipeline {
             steps {
                 sh '''
                     chmod +x scripts/cleanup.sh
-                    bash scripts/cleanup.sh
+                    ./scripts/cleanup.sh
                 '''
             }
         }
