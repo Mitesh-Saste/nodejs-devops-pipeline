@@ -27,7 +27,7 @@ pipeline {
 
         stage('Copy SSH Key') {
             steps {
-                sh 'cp ~/devops-server-key.pub infra/'
+                sh 'cp /var/lib/jenkins/keys/devops-server-key.pub infra/'
             }
         }
 
@@ -38,6 +38,16 @@ pipeline {
                     timeout(time: 30, unit: 'MINUTES') {
                         sh 'terraform apply -auto-approve'
                     }
+                }
+            }
+        }
+
+        stage('Fetch EC2 IP from AWS') {
+            steps {
+                script {
+                    def instance_id = sh(script: "aws ec2 describe-instances --filters 'Name=tag:Name,Values=devops-server' --query 'Reservations[*].Instances[*].InstanceId' --output text", returnStdout: true).trim()
+                    def ec2_ip = sh(script: "aws ec2 describe-instances --instance-ids ${instance_id} --query 'Reservations[*].Instances[*].PublicIpAddress' --output text", returnStdout: true).trim()
+                    echo "AWS EC2 IP: ${ec2_ip}"
                 }
             }
         }
@@ -57,6 +67,7 @@ pipeline {
         stage('Ansible Deployment') {
             steps {
                 timeout(time: 10, unit: 'MINUTES') {
+                    sh 'cp /var/lib/jenkins/keys/devops-server-key infra/'
                     sh 'ansible-playbook -i ansible/hosts.ini ansible/deploy.yml'
                 }
             }
