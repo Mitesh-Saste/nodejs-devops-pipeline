@@ -58,7 +58,7 @@ pipeline {
         stage('Ansible Deployment') {
             steps {
                 timeout(time: 10, unit: 'MINUTES') {
-                    sh 'cp ${SSH_KEY_PATH} infra/'
+                    sh "cp ${SSH_KEY_PATH} infra/"
                     sh 'ansible-playbook -i ansible/hosts.ini ansible/deploy.yml'
                 }
             }
