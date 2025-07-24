@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'develop', url: 'https://github.com/Mitesh-Saste/devops-pipeline-nodejs.git'
+                git branch: 'develop', url: 'https://github.com/Mitesh-Saste/nodejs-devops-pipeline.git'
             }
         }
 
