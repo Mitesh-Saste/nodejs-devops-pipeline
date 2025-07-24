@@ -14,8 +14,8 @@ echo -e "${GREEN}[INFO] Starting full cleanup...${NC}"
 ### 1. Docker Cleanup
 
 echo -e "${YELLOW}[ACTION] Removing dangling Docker images...${NC}"
-if docker images -f "dangling=true" -q | grep .; then
-  docker rmi $(docker images -f "dangling=true" -q)
+if docker images prune -f "dangling=true" -q | grep .; then
+  docker rmi $(docker images prune -f "dangling=true" -q)
   echo -e "${GREEN}[SUCCESS] Removed dangling Docker images.${NC}"
 else
   echo -e "${GREEN}[INFO] No dangling Docker images found.${NC}"
