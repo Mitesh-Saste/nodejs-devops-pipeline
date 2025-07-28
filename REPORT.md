@@ -1,12 +1,12 @@
 # DevOps Pipeline Project Report
 
-## 📌 Project Overview
+## Project Overview
 
 This project showcases a complete CI/CD DevOps pipeline for deploying a Node.js application using modern DevOps tools including Git, GitHub, Docker, Terraform, Ansible, Jenkins, and Shell scripting.
 
 ---
 
-## ✅ Steps Completed
+## Steps Completed
 
 ### Step 1: GitHub Repository Setup with Branching Strategy
 
@@ -80,7 +80,7 @@ This project showcases a complete CI/CD DevOps pipeline for deploying a Node.js 
 
 ---
 
-## 📂 Branch Merging Strategy
+## Branch Merging Strategy
 
 * All changes were made in the `develop` branch.
 * A Pull Request will be created to merge `develop` into protected `main`.
@@ -88,7 +88,7 @@ This project showcases a complete CI/CD DevOps pipeline for deploying a Node.js 
 
 ---
 
-## 📸 Screenshots & Logs
+## Screenshots & Logs
 
 ![alt text](image.png)
 
@@ -118,20 +118,20 @@ This project showcases a complete CI/CD DevOps pipeline for deploying a Node.js 
 
 ---
 
-## 🙌 Final Notes
+## Final Notes
 
 This project demonstrates a complete end-to-end DevOps pipeline from coding to deployment. It is modular, automated, and production-ready for scalable teams
 
 ---
 
-### 🔗 DockerHub Repo
+### DockerHub Repo
 
 [https://hub.docker.com/repository/docker/miteshsaste/devops-nodejs-app](https://hub.docker.com/repository/docker/miteshsaste/devops-nodejs-app)
 
-### 🔗 GitHub Repository
+### GitHub Repository
 
 [https://github.com/Mitesh-Saste/nodejs-devops-pipeline](https://github.com/Mitesh-Saste/nodejs-devops-pipeline)
 
 ---
 
-✅ **All 7 steps are complete.**
+ **All 7 steps are complete.**
