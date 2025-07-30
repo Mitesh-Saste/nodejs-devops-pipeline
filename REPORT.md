@@ -1,9 +1,5 @@
 # DevOps Pipeline Case Study Report
 
-## Case Study Overview
-
-This case study showcases a complete CI/CD DevOps pipeline for deploying a Node.js application using modern DevOps tools including Git, GitHub, Docker, Terraform, Ansible, Jenkins, and Shell scripting.
-
 ---
 
 ## Steps Completed
