@@ -120,7 +120,7 @@ This project showcases a complete CI/CD DevOps pipeline for deploying a Node.js 
 
 ## Final Notes
 
-This project demonstrates a complete end-to-end DevOps pipeline from coding to deployment. It is modular, automated, and production-ready for scalable teams
+This project demonstrates a complete end-to-end DevOps pipeline from coding to deployment. It is modular, automated, and production-ready for scalable teams.
 
 ---
 
