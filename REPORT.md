@@ -99,9 +99,9 @@ main. This ensures code quality and peer reviews before production deployment.
 
 * Wrote Terraform Configuration Files in infra/ directory
 
-  * `variables.tf'
+  * `variables.tf`
   * `main.tf`
-  * `outputs.tf'
+  * `outputs.tf`
 
 * Generated SSH Key Pair for EC2 Access
 
@@ -226,11 +226,11 @@ main. This ensures code quality and peer reviews before production deployment.
 
 ### Step 8: Documentation and Report Finalization
 
-* Created REPORT.md
+* Created `REPORT.md`
 
 * Summarized all 7 steps of the DevOps pipeline implementation
 
-* Pushed REPORT.md to GitHub
+* Pushed `REPORT.md` to GitHub
 
 ![alt text](<Screenshot 2025-07-25 010916.png>)
 
@@ -238,7 +238,7 @@ main. This ensures code quality and peer reviews before production deployment.
 
 ![alt text](<Screenshot 2025-07-25 011334.png>)
 
-* Merged develop into main
+* Merged `develop` into `main`
 
 ![alt text](<Screenshot 2025-07-25 012354.png>)
 
